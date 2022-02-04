@@ -14,8 +14,8 @@ app.use(morgan("dev"));
 app.use(routes);
 app.get("/", (req, res) => {
   res.status(200).json({
-    "get-data": "/get-data",
-    "get-wlink": "/get-wlink",
+    "get-data": "/api/get-data",
+    "get-wlink": "/api/get-wlink",
   });
 });
 const PORT = process.env.PORT || 8000;
