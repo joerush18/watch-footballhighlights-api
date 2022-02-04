@@ -21,7 +21,7 @@ class DataController {
         message: "Please provide a href link.",
       });
     }
-    const wLink = await ScrapeService.watchLinkScraper(req.body.link);
+    const wLink = await ScrapeService.watchLinkScraper(link);
     res.json({
       wLink,
     });

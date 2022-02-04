@@ -23,6 +23,8 @@ class scraperService {
         const link =
           "https://hoofoot.com/" + hrefLink.slice(2, hrefLink.length);
 
+        // thumbnail
+        const thumbnail = $(element).find(`a > img`).attr("src");
         // score line
         const scoreline = $(element).find(`#d${id}`).text();
 
@@ -37,6 +39,7 @@ class scraperService {
         let details = {
           id,
           link,
+          thumbnail,
           scoreline,
           competitionName,
           competitionImage: competitionImg,
