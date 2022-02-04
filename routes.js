@@ -3,10 +3,9 @@ const DataController = require("./controllers/data-controller");
 
 // get routers
 router.get("/api/get-data", DataController.getData);
-router.get("/api/get-wlink", DataController.getwlink);
 
 // post routers
-router.post("/api/get-data", DataController.getData);
-router.post("/api/get-wlink", DataController.getwlink);
+router.post("/api/post/get-data", DataController.getDataPost);
+router.post("/api/post/get-wlink", DataController.getwlinkPost);
 
 module.exports = router;

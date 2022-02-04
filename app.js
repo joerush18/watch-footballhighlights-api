@@ -14,11 +14,29 @@ app.use(morgan("dev"));
 app.use(routes);
 app.get("/", (req, res) => {
   res.status(200).json({
-    "get-data": "/api/get-data",
-    "get-wlink": "/api/get-wlink",
+    message,
   });
 });
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, function () {
   console.log(`App running on PORT:${PORT}`);
 });
+
+const message = {
+  "Get Reqs": {
+    "get-data": "/api/get-data",
+    message:
+      "Random matches make post req for specific competition or team data",
+  },
+  "Post reqs": {
+    "get-data": {
+      link: "/api/post/get-data",
+      message:
+        "Kindly pass the id of the specific competition to get specifc matches.",
+    },
+    "get-wlink": {
+      link: "/api/post/get-wlink",
+      message: "Kindly pass the link of specific match from the data.",
+    },
+  },
+};
