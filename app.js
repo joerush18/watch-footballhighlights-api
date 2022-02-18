@@ -32,7 +32,7 @@ const message = {
     "get-data": {
       link: "/api/post/get-data",
       message:
-        "Kindly pass the id of the specific competition to get specifc matches.",
+        "Kindly pass the id of the specific competition to get specifc matches",
     },
     "get-wlink": {
       link: "/api/post/get-wlink",
